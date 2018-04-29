@@ -1,8 +1,9 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using PhotoKiosk;
 
-[assembly: OwinStartupAttribute(typeof(PhotoDirectory.Startup))]
-namespace PhotoDirectory
+[assembly: OwinStartup(typeof(Startup))]
+namespace PhotoKiosk
 {
     public partial class Startup
     {

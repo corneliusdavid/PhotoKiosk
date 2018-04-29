@@ -3,11 +3,10 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using PhotoDirectory.Models;
+using PhotoKiosk.Models;
 
-namespace PhotoDirectory
+namespace PhotoKiosk
 {
     public partial class Startup
     {

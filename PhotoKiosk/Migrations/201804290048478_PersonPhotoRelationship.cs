@@ -1,8 +1,7 @@
-namespace PhotoDirectory.Migrations
+namespace PhotoKiosk.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class PersonPhotoRelationship : DbMigration
     {
         public override void Up()
