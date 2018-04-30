@@ -202,6 +202,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,6 +213,10 @@
     <Compile Include="Migrations\201804290048478_PersonPhotoRelationship.cs" />
     <Compile Include="Migrations\201804290048478_PersonPhotoRelationship.Designer.cs">
       <DependentUpon>201804290048478_PersonPhotoRelationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804300513015_LinkPhotoToPerson.cs" />
+    <Compile Include="Migrations\201804300513015_LinkPhotoToPerson.Designer.cs">
+      <DependentUpon>201804300513015_LinkPhotoToPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -247,7 +252,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -281,6 +288,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\People\Create.cshtml" />
+    <Content Include="Views\People\Delete.cshtml" />
+    <Content Include="Views\People\Details.cshtml" />
+    <Content Include="Views\People\Edit.cshtml" />
+    <Content Include="Views\People\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -304,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804290048478_PersonPhotoRelationship.resx">
       <DependentUpon>201804290048478_PersonPhotoRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804300513015_LinkPhotoToPerson.resx">
+      <DependentUpon>201804300513015_LinkPhotoToPerson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
