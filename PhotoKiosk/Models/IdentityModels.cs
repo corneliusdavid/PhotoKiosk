@@ -21,13 +21,26 @@ namespace PhotoKiosk.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Person> People { get; set; }
-        public DbSet<RelationShipType> RelationShipTypes { get; set; }
-        public DbSet<Relationship> Relationships { get; set; }
-        public DbSet<Photo> Photos { get; set; }    
+        public DbSet<Photo> Photos { get; set; }
+        public DbSet<Group> Groups { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.Photo)
+                .WithMany(p => p.People)
+                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.Group)
+                .WithMany(g => g.Member)
+                .WillCascadeOnDelete(false);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public static ApplicationDbContext Create()

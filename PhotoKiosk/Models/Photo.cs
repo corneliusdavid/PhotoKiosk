@@ -1,13 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PhotoKiosk.Models
 {
     public class Photo
     {
+        [Required]
         public int Id { get; set; }
 
-        [Required]
         [StringLength(255)]
         public string PhotoFilename { get; set; }   
+
+        public ICollection<Person> People { get; set; }
     }
 }

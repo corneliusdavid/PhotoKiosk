@@ -218,14 +218,29 @@
     <Compile Include="Migrations\201804300513015_LinkPhotoToPerson.Designer.cs">
       <DependentUpon>201804300513015_LinkPhotoToPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805161736355_ChangeGroupMemberToPerson.cs" />
+    <Compile Include="Migrations\201805161736355_ChangeGroupMemberToPerson.Designer.cs">
+      <DependentUpon>201805161736355_ChangeGroupMemberToPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805161824387_PersonPhotoOptional.cs" />
+    <Compile Include="Migrations\201805161824387_PersonPhotoOptional.Designer.cs">
+      <DependentUpon>201805161824387_PersonPhotoOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805161829384_GroupMembershipOptional.cs" />
+    <Compile Include="Migrations\201805161829384_GroupMembershipOptional.Designer.cs">
+      <DependentUpon>201805161829384_GroupMembershipOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805162143059_DropRelationships.cs" />
+    <Compile Include="Migrations\201805162143059_DropRelationships.Designer.cs">
+      <DependentUpon>201805162143059_DropRelationships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Group.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Photo.cs" />
-    <Compile Include="Models\Relationship.cs" />
-    <Compile Include="Models\RelationShipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -319,6 +334,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804300513015_LinkPhotoToPerson.resx">
       <DependentUpon>201804300513015_LinkPhotoToPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805161736355_ChangeGroupMemberToPerson.resx">
+      <DependentUpon>201805161736355_ChangeGroupMemberToPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805161824387_PersonPhotoOptional.resx">
+      <DependentUpon>201805161824387_PersonPhotoOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805161829384_GroupMembershipOptional.resx">
+      <DependentUpon>201805161829384_GroupMembershipOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805162143059_DropRelationships.resx">
+      <DependentUpon>201805162143059_DropRelationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

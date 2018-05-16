@@ -15,13 +15,12 @@ namespace PhotoKiosk.Models
         public string FirstName { get; set; }
 
         [StringLength(100)]
-        public string MiddleName { get; set; }
-
-        [StringLength(100)]
         public string NickName { get; set; }
 
-        public Photo Photo { get; set; }
+        public virtual int? GroupId { get; set; }
+        public Group Group { get; set; }    
 
-        public int PhotoID { get; set; }    
+        public virtual int? PhotoId { get; set; }
+        public Photo Photo { get; set; }
     }
 }
